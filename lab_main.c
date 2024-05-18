@@ -1,5 +1,3 @@
-
-
 //
 // Included Files
 //
@@ -11,6 +9,7 @@
 #define ADC_BUF_LEN         50
 uint16_t DEBUG_TOGGLE = 1;    // Used for real-time mode
 uint16_t AdcBuf[ADC_BUF_LEN];  // ADC buffer allocation
+float VoltageBuf[ADC_BUF_LEN]; // Voltage buffer allocation
 
 #ifdef DACB_BASE
 uint16_t DacOutput;
@@ -45,13 +44,14 @@ int QuadratureTable[SINE_PTS] = {
         0xA862,         // [22] 316.8
         0xC257,         // [23] 331.2
         0xE02C          // [24] 345.6
-        };
+};
 #endif
 
 //
 // Function Declarations
 //
 __interrupt void INT_myADCA_1_ISR(void);
+void convertAdcToVoltage(void);
 
 //
 // Main
@@ -71,17 +71,22 @@ void main(void)
     ERTM;
 
     // Main Loop
-    while(1){}
-
+    while(1)
+    {
+        convertAdcToVoltage();
+        // Add a delay or a condition to control the frequency of conversion
+        DEVICE_DELAY_US(100000);  // Delay of 100 ms
+    }
 }
 
-interrupt void INT_myADCA_1_ISR(void)
+__interrupt void INT_myADCA_1_ISR(void)
 {
     static uint16_t *AdcBufPtr = AdcBuf;
-    uint16_t LED_count = 0;
+    static uint16_t LED_count = 0; // Declared as static to retain its value between ISR calls
 
     // Read the ADC Result
-    *AdcBufPtr++ = ADC_readResult(myADCA_RESULT_BASE, myADCA_SOC0);
+    uint16_t adcValue = ADC_readResult(myADCA_RESULT_BASE, myADCA_SOC0);
+    *AdcBufPtr++ = adcValue;
 
     // Brute Force the circular buffer
     if (AdcBufPtr == (AdcBuf + ADC_BUF_LEN))
@@ -97,7 +102,7 @@ interrupt void INT_myADCA_1_ISR(void)
 
     if(LED_count++ > 25000)                      // Toggle slowly to see the LED blink
     {
-        GPIO_togglePin(myBoardLED0_GPIO);                   // Toggle the pin
+        GPIO_togglePin(myBoardLED0_GPIO);        // Toggle the pin
         LED_count = 0;                           // Reset the counter
     }
 
@@ -123,6 +128,17 @@ interrupt void INT_myADCA_1_ISR(void)
     Interrupt_clearACKGroup(INT_myADCA_1_INTERRUPT_ACK_GROUP);
     ADC_clearInterruptStatus(myADCA_BASE, ADC_INT_NUMBER1);
 } // End of ADC ISR
+
+void convertAdcToVoltage(void)
+{
+    int i = 0;
+
+    for(; i < ADC_BUF_LEN; i++)
+    {
+        VoltageBuf[i] = (AdcBuf[i] * 3.5) / 4095.0;
+    }
+}
 //
 // End of File
 //
+
