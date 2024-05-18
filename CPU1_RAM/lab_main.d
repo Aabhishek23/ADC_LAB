@@ -2,7 +2,7 @@
 
 lab_main.obj: ../lab_main.c
 lab_main.obj: syscfg/board.h
-lab_main.obj: D:/Users/VICTUS/workspace_v12/adc_lp_f2837xd/device/driverlib.h
+lab_main.obj: C:/Users/VICTUS/OneDrive/Desktop/F28379D/ADC_LAB/device/driverlib.h
 lab_main.obj: D:/ti/c2000/C2000Ware_5_02_00_00/driverlib/f2837xd/driverlib/inc/hw_memmap.h
 lab_main.obj: D:/ti/c2000/C2000Ware_5_02_00_00/driverlib/f2837xd/driverlib/adc.h
 lab_main.obj: D:/ti/ccs1240/ccs/tools/compiler/ti-cgt-c2000_22.6.0.LTS/include/stdbool.h
@@ -88,13 +88,13 @@ lab_main.obj: D:/ti/c2000/C2000Ware_5_02_00_00/driverlib/f2837xd/driverlib/upp.h
 lab_main.obj: D:/ti/c2000/C2000Ware_5_02_00_00/driverlib/f2837xd/driverlib/inc/hw_upp.h
 lab_main.obj: D:/ti/c2000/C2000Ware_5_02_00_00/driverlib/f2837xd/driverlib/version.h
 lab_main.obj: D:/ti/c2000/C2000Ware_5_02_00_00/driverlib/f2837xd/driverlib/driver_inclusive_terminology_mapping.h
-lab_main.obj: D:/Users/VICTUS/workspace_v12/adc_lp_f2837xd/device/device.h
+lab_main.obj: C:/Users/VICTUS/OneDrive/Desktop/F28379D/ADC_LAB/device/device.h
 
 ../lab_main.c:
 
 syscfg/board.h:
 
-D:/Users/VICTUS/workspace_v12/adc_lp_f2837xd/device/driverlib.h:
+C:/Users/VICTUS/OneDrive/Desktop/F28379D/ADC_LAB/device/driverlib.h:
 
 D:/ti/c2000/C2000Ware_5_02_00_00/driverlib/f2837xd/driverlib/inc/hw_memmap.h:
 
@@ -266,5 +266,5 @@ D:/ti/c2000/C2000Ware_5_02_00_00/driverlib/f2837xd/driverlib/version.h:
 
 D:/ti/c2000/C2000Ware_5_02_00_00/driverlib/f2837xd/driverlib/driver_inclusive_terminology_mapping.h:
 
-D:/Users/VICTUS/workspace_v12/adc_lp_f2837xd/device/device.h:
+C:/Users/VICTUS/OneDrive/Desktop/F28379D/ADC_LAB/device/device.h:
 

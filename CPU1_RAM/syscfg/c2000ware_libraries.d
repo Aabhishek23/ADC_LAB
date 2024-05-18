@@ -3,7 +3,7 @@
 syscfg/c2000ware_libraries.obj: syscfg/c2000ware_libraries.c
 syscfg/c2000ware_libraries.obj: syscfg/c2000ware_libraries.h
 syscfg/c2000ware_libraries.obj: syscfg/board.h
-syscfg/c2000ware_libraries.obj: D:/Users/VICTUS/workspace_v12/adc_lp_f2837xd/device/driverlib.h
+syscfg/c2000ware_libraries.obj: C:/Users/VICTUS/OneDrive/Desktop/F28379D/ADC_LAB/device/driverlib.h
 syscfg/c2000ware_libraries.obj: D:/ti/c2000/C2000Ware_5_02_00_00/driverlib/f2837xd/driverlib/inc/hw_memmap.h
 syscfg/c2000ware_libraries.obj: D:/ti/c2000/C2000Ware_5_02_00_00/driverlib/f2837xd/driverlib/adc.h
 syscfg/c2000ware_libraries.obj: D:/ti/ccs1240/ccs/tools/compiler/ti-cgt-c2000_22.6.0.LTS/include/stdbool.h
@@ -89,7 +89,7 @@ syscfg/c2000ware_libraries.obj: D:/ti/c2000/C2000Ware_5_02_00_00/driverlib/f2837
 syscfg/c2000ware_libraries.obj: D:/ti/c2000/C2000Ware_5_02_00_00/driverlib/f2837xd/driverlib/inc/hw_upp.h
 syscfg/c2000ware_libraries.obj: D:/ti/c2000/C2000Ware_5_02_00_00/driverlib/f2837xd/driverlib/version.h
 syscfg/c2000ware_libraries.obj: D:/ti/c2000/C2000Ware_5_02_00_00/driverlib/f2837xd/driverlib/driver_inclusive_terminology_mapping.h
-syscfg/c2000ware_libraries.obj: D:/Users/VICTUS/workspace_v12/adc_lp_f2837xd/device/device.h
+syscfg/c2000ware_libraries.obj: C:/Users/VICTUS/OneDrive/Desktop/F28379D/ADC_LAB/device/device.h
 
 syscfg/c2000ware_libraries.c:
 
@@ -97,7 +97,7 @@ syscfg/c2000ware_libraries.h:
 
 syscfg/board.h:
 
-D:/Users/VICTUS/workspace_v12/adc_lp_f2837xd/device/driverlib.h:
+C:/Users/VICTUS/OneDrive/Desktop/F28379D/ADC_LAB/device/driverlib.h:
 
 D:/ti/c2000/C2000Ware_5_02_00_00/driverlib/f2837xd/driverlib/inc/hw_memmap.h:
 
@@ -269,5 +269,5 @@ D:/ti/c2000/C2000Ware_5_02_00_00/driverlib/f2837xd/driverlib/version.h:
 
 D:/ti/c2000/C2000Ware_5_02_00_00/driverlib/f2837xd/driverlib/driver_inclusive_terminology_mapping.h:
 
-D:/Users/VICTUS/workspace_v12/adc_lp_f2837xd/device/device.h:
+C:/Users/VICTUS/OneDrive/Desktop/F28379D/ADC_LAB/device/device.h:
 
